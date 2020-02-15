@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="492370c3-b945-4e4b-8d58-733e2743e7ff" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/ant.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/codeStyles/codeStyleConfig.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/lab2v13.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/sbt.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Readme.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/develop/bat/compile_bailiff.bat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/develop/bat/compile_dexter.bat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/develop/bat/httpdCopy.bat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/develop/bat/install_all.bat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/develop/bat/install_bailiff.bat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/develop/bat/install_dexter.bat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/develop/bat/install_jini.bat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/develop/build.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/develop/build/tag/bailiff/Bailiff$1.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/develop/build/tag/bailiff/Bailiff$Agitator.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/develop/build/tag/bailiff/Bailiff.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/develop/build/tag/bailiff/BailiffInterface.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/develop/build/tag/dexter/Dexter.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/develop/dist/Bailiff-dl.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/develop/dist/Bailiff.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/develop/dist/Dexter.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/develop/lib/jini-core.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/develop/lib/jini-ext.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/develop/lib/reggie-dl.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/develop/mf/Bailiff.manifest" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/develop/mf/Dexter.manifest" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/develop/src/tag/bailiff/Bailiff.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/develop/src/tag/bailiff/BailiffInterface.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/develop/src/tag/dexter/Dexter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test/bin/pc/Bailiff.bat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test/bin/pc/Dexter.bat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test/bin/pc/HTTPD_CFG.BAT" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test/bin/pc/r1_httpd.bat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test/bin/pc/r2_rmid.bat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test/bin/pc/r3_reggie.bat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test/bin/unix/Scripts on OS X.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test/bin/unix/bailiff.sh" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test/bin/unix/dexter.sh" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test/bin/unix/httpd.cfg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test/bin/unix/r1_httpd.sh" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test/bin/unix/r2_rmid.sh" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test/bin/unix/r3_reggie.sh" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test/cbs/Bailiff-dl.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test/cbs/Bailiff.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test/cbs/Dexter.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test/cbs/jini-core.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test/cbs/jini-ext.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test/cbs/reggie-dl.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test/lib/JarRunner.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test/lib/jini-core.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test/lib/jini-ext.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test/lib/policy.all" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test/lib/reggie-dl.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test/lib/reggie.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test/lib/tools.jar" afterDir="false" />
+    </list>
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="CodeStyleSettingsInfer">
+    <option name="done" value="true" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectCodeStyleSettingsMigration">
+    <option name="version" value="1" />
+  </component>
+  <component name="ProjectId" id="1XpzFcUYRerAfcb4EIZWvLTrAAK" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="PropertiesComponent">
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/test/cbs" />
+    <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
+    <property name="nodejs_npm_path_reset_for_default_project" value="true" />
+    <property name="project.structure.last.edited" value="Project" />
+    <property name="project.structure.proportion" value="0.0" />
+    <property name="project.structure.side.proportion" value="0.0" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/test/cbs" />
+    </key>
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="492370c3-b945-4e4b-8d58-733e2743e7ff" name="Default Changelist" comment="" />
+      <created>1581757721393</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1581757721393</updated>
+      <workItem from="1581757722570" duration="13953000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+</project>
