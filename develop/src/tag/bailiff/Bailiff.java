@@ -3,6 +3,8 @@
 
 package tag.bailiff;
 
+import java.util.UUID;
+
 // TODO Remove the asterisks
 import java.io.*;
 import java.net.*;
@@ -121,8 +123,9 @@ public class Bailiff
       // of Class so that we can match the entry point method's name with
       // the parameter signature. So, the myParms[] array is loaded with
       // the class of each entry point parameter.
+        System.out.println("\nArgs length"+ args.length);
 
-      if (0 < args.length) {
+        if (0 < args.length) {
 	myParms = new Class [args.length];
 	for (int i = 0; i < args.length; i++) {
 	  myParms[i] = args[i].getClass ();
@@ -218,11 +221,11 @@ public class Bailiff
    * @throws NoSuchMethodException Thrown if the specified entry method
    * does not exist with the expected signature.
    */
-  public void migrate (Object obj, String cb, Object [] args)
+  public void migrate (Object obj, String cb, Object [] args, UUID uid)
     throws
       java.rmi.RemoteException, NoSuchMethodException
   {
-      System.out.println("Test point");
+      System.out.println("My UUID: "+ uid);
     log.fine(String.format("migrate obj=%s cb=%s args=%s",
 			   obj.toString(),
 			   cb,

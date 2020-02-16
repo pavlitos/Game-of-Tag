@@ -3,6 +3,8 @@
 
 package tag.bailiff;
 
+import java.util.UUID;
+
 /**
  * This interface is for the Bailiff's clients. The clients are mobile
  * code which move into the Bailiff's JVM for execution.
@@ -45,7 +47,7 @@ public interface BailiffInterface
    * the number of arguments is wrong or are of the wrong type).
    * 
    */
-  public void migrate (Object obj, String cb, Object [] args)
+  public void migrate (Object obj, String cb, Object [] args, UUID uid)
     throws
       java.rmi.RemoteException,
       java.lang.NoSuchMethodException;

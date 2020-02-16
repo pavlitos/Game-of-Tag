@@ -5,6 +5,7 @@ package tag.dexter;
 
 import java.io.*;		// TODO remove the asterisk
 import java.util.Random;
+import java.util.UUID;
 
 import net.jini.core.lookup.*;
 import net.jini.lookup.*;
@@ -163,6 +164,23 @@ public class Dexter implements Serializable
     catch (java.lang.InterruptedException e) {}
   }
 
+    /**
+     * This characterized the player
+     *
+     * @return if it is IT or NOT IT
+     */
+    protected Boolean defineCharacter() {
+        Random rand = new Random();
+        int n = rand.nextInt(50);
+        if (n <= 25) {
+            System.out.println("I am NOT IT");
+            return false;
+        } else {
+            System.out.println("I am IT");
+            return true;
+        }
+    }
+
   /**
    * This is Dexter's main program once he is on his way. In short, he
    * gets himself a service discovery manager and asks it about Bailiffs.
@@ -182,6 +200,12 @@ public class Dexter implements Serializable
     // Create a Jini service discovery manager to help us interact with
     // the Jini lookup service.
     SDM = new ServiceDiscoveryManager (null, null);
+
+    // Define the character IT or NOT IT
+    boolean it= defineCharacter();
+
+    // Players identifier
+    UUID uid= UUID.randomUUID();
 
     // Loop forever until we have successfully jumped to a Bailiff.
     for (;;) {
@@ -263,7 +287,7 @@ public class Dexter implements Serializable
 	  debugMsg("Trying to jump...");
 
 	  try {
-	    bfi.migrate(this, "topLevel", new Object [] {});
+	    bfi.migrate(this, "topLevel", new Object [] {}, uid);
 	    // SUCCESS
 	    SDM.terminate();	// shut down Service Discovery Manager
 	    return;		// return and end this thread
