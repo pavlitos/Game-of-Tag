@@ -53,6 +53,9 @@ public class Dexter implements Serializable
    */
   protected boolean debug = true;
 
+  protected UUID uid=null;
+  protected boolean it;
+
   /**
    * The string name of the Bailiff service interface, used when
    * querying the Jini lookup server.
@@ -140,6 +143,12 @@ public class Dexter implements Serializable
       java.lang.ClassNotFoundException
   {
 
+
+    // Define the character IT or NOT IT
+    this.it= defineCharacter();
+
+    // Generate UUID
+    this.uid=UUID.randomUUID();
     // The Jini service template bailiffTemplate is used to query the
     // Jini lookup server for services which implement the
     // BailiffInterface. The string name of that interface is passed
@@ -173,10 +182,10 @@ public class Dexter implements Serializable
         Random rand = new Random();
         int n = rand.nextInt(50);
         if (n <= 25) {
-            System.out.println("I am NOT IT");
+            debugMsg("I am NOT IT");
             return false;
         } else {
-            System.out.println("I am IT");
+            debugMsg("I am IT");
             return true;
         }
     }
@@ -201,11 +210,6 @@ public class Dexter implements Serializable
     // the Jini lookup service.
     SDM = new ServiceDiscoveryManager (null, null);
 
-    // Define the character IT or NOT IT
-    boolean it= defineCharacter();
-
-    // Players identifier
-    UUID uid= UUID.randomUUID();
 
     // Loop forever until we have successfully jumped to a Bailiff.
     for (;;) {
@@ -285,9 +289,11 @@ public class Dexter implements Serializable
 	else {
 
 	  debugMsg("Trying to jump...");
-
+	  String key= "agent";
 	  try {
-	    bfi.migrate(this, "topLevel", new Object [] {}, uid);
+        System.out.println("uuid before migration: "+ uid);
+        System.out.println("Character before migration: "+ it);
+	    bfi.migrate(this, "topLevel", new Object []{key, this.uid,this.it });
 	    // SUCCESS
 	    SDM.terminate();	// shut down Service Discovery Manager
 	    return;		// return and end this thread
@@ -309,6 +315,9 @@ public class Dexter implements Serializable
     } // for ever
   }   // topLevel
 
+  public void topLevel(String key, UUID value, Boolean itStatus) {
+    debugMsg("TOP LEVEL WORKS!");
+  }
   private static void showUsage() {
     String [] msg = {
       "Usage: {?,-h,-help}|[-debug][-id string][-rs ms][-qs ms][-mr n]",
@@ -385,6 +394,7 @@ public class Dexter implements Serializable
 	break;
       }	// switch
     }	// for all commandline arguments
+
     dx.topLevel();		// Start the Dexter
 
   } // main

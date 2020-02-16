@@ -47,7 +47,7 @@ public interface BailiffInterface
    * the number of arguments is wrong or are of the wrong type).
    * 
    */
-  public void migrate (Object obj, String cb, Object [] args, UUID uid)
+  public void migrate (Object obj, String cb, Object [] args)
     throws
       java.rmi.RemoteException,
       java.lang.NoSuchMethodException;

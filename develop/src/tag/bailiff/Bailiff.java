@@ -56,6 +56,8 @@ public class Bailiff
   // forensic analysis.
   protected Logger log;
 
+  // Number of Clients on each Bailiff
+  public int NumberOfClients = 0;
   // The id string identifies this Bailiff instance in messages.
   protected String id = "";
 
@@ -115,25 +117,22 @@ public class Bailiff
      */
     public Agitator (Object obj, String cb, Object [] args)
     {
-      myObj  = obj;
-      myCb   = cb;
-      myArgs = args;
-
-      // If the array of arguments are non-zero we must create an array
-      // of Class so that we can match the entry point method's name with
-      // the parameter signature. So, the myParms[] array is loaded with
-      // the class of each entry point parameter.
-        System.out.println("\nArgs length"+ args.length);
-
+          myObj  = obj;
+          myCb   = cb;
+          myArgs = args;
+          NumberOfClients ++;
+            // If the array of arguments are non-zero we must create an array
+          // of Class so that we can match the entry point method's name with
+          // the parameter signature. So, the myParms[] array is loaded with
+          // the class of each entry point parameter.
         if (0 < args.length) {
-	myParms = new Class [args.length];
-	for (int i = 0; i < args.length; i++) {
-	  myParms[i] = args[i].getClass ();
-	}
-      }
-      else {
-	myParms = null;
-      }
+            myParms = new Class [args.length];
+            for (int i = 0; i < args.length; i++) {
+              myParms[i] = args[i].getClass ();
+            }
+        } else {
+        myParms = null;
+        }
     }
 
     /**
@@ -221,17 +220,17 @@ public class Bailiff
    * @throws NoSuchMethodException Thrown if the specified entry method
    * does not exist with the expected signature.
    */
-  public void migrate (Object obj, String cb, Object [] args, UUID uid)
+
+  public void migrate (Object obj, String cb, Object [] args)
     throws
       java.rmi.RemoteException, NoSuchMethodException
   {
-      System.out.println("My UUID: "+ uid);
     log.fine(String.format("migrate obj=%s cb=%s args=%s",
 			   obj.toString(),
 			   cb,
 			   Arrays.toString(args)));
-    
     Agitator agt = new Agitator (obj, cb, args);
+    System.out.println("Show the number of clients " + NumberOfClients);
     agt.initialize ();
     agt.start ();
   }
